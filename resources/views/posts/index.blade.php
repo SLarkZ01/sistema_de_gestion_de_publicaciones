@@ -29,9 +29,9 @@
                                     <h3 class="text-lg font-semibold">{{ $publicacion->titulo }}</h3>
                                     <p class="text-gray-600 mt-2">{{ Str::limit($publicacion->contenido, 200) }}</p>
                                     <div class="mt-4 flex space-x-4">
-                                        <a href="{{ route('posts.show', $publicacion) }}" class="text-blue-600 hover:text-blue-800">Ver</a>
-                                        <a href="{{ route('posts.edit', $publicacion) }}" class="text-yellow-600 hover:text-yellow-800">Editar</a>
-                                        <form action="{{ route('posts.destroy', $publicacion) }}" method="POST" class="inline">
+                                        <a href="{{ route('posts.show', ['post' => $publicacion->id]) }}" class="text-blue-600 hover:text-blue-800">Ver</a>
+                                        <a href="{{ route('posts.edit', ['post' => $publicacion->id]) }}" class="text-yellow-600 hover:text-yellow-800">Editar</a>
+                                        <form action="{{ route('posts.destroy', ['post' => $publicacion->id]) }}" method="POST" class="inline">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="text-red-600 hover:text-red-800" onclick="return confirm('¿Estás seguro?')">

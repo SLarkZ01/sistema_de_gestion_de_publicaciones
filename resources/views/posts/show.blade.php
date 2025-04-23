@@ -5,10 +5,10 @@
                 {{ $publicacion->titulo }}
             </h2>
             <div class="flex space-x-4">
-                <a href="{{ route('posts.edit', $publicacion) }}" class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded">
+                <a href="{{ route('posts.edit', ['post' => $publicacion->id]) }}" class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded">
                     Editar
                 </a>
-                <form action="{{ route('posts.destroy', $publicacion) }}" method="POST" class="inline">
+                <form action="{{ route('posts.destroy', ['post' => $publicacion->id]) }}" method="POST" class="inline">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" onclick="return confirm('¿Estás seguro?')">

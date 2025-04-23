@@ -51,36 +51,36 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Publicacion $id): View
+    public function show(Publicacion $post): View
     {
         // Ensure the logged-in user owns this publication
-        if ($id->user_id !== Auth::id()) {
+        if ($post->user_id !== Auth::id()) {
             abort(403);
         }
         
-        return view('posts.show', ['publicacion' => $id]);
+        return view('posts.show', ['publicacion' => $post]);
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Publicacion $id): View
+    public function edit(Publicacion $post): View
     {
         // Ensure the logged-in user owns this publication
-        if ($id->user_id !== Auth::id()) {
+        if ($post->user_id !== Auth::id()) {
             abort(403);
         }
 
-        return view('posts.edit', ['publicacion' => $id]);
+        return view('posts.edit', ['publicacion' => $post]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Publicacion $id): RedirectResponse
+    public function update(Request $request, Publicacion $post): RedirectResponse
     {
         // Ensure the logged-in user owns this publication
-        if ($id->user_id !== Auth::id()) {
+        if ($post->user_id !== Auth::id()) {
             abort(403);
         }
 
@@ -89,7 +89,7 @@ class PostController extends Controller
             'contenido' => 'required'
         ]);
 
-        $id->update($validated);
+        $post->update($validated);
 
         return redirect()->route('posts.index')->with('status', 'Publicación actualizada exitosamente');
     }
@@ -97,14 +97,14 @@ class PostController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Publicacion $id): RedirectResponse
+    public function destroy(Publicacion $post): RedirectResponse
     {
         // Ensure the logged-in user owns this publication
-        if ($id->user_id !== Auth::id()) {
+        if ($post->user_id !== Auth::id()) {
             abort(403);
         }
 
-        $id->delete();
+        $post->delete();
 
         return redirect()->route('posts.index')->with('status', 'Publicación eliminada exitosamente');
     }
