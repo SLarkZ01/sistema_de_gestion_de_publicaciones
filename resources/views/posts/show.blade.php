@@ -34,7 +34,7 @@
                     
                     <div class="mt-6">
                         <a href="{{ route('posts.index') }}" class="text-blue-600 hover:text-blue-800">
-                            ← Volver a publicaciones
+                            ← Volver a las publicaciones
                         </a>
                     </div>
                 </div>
