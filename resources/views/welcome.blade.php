@@ -176,6 +176,5 @@
                 <p>&copy; {{ date('Y') }} Sistema de Gestión de Publicaciones. Derechos por Thomas Montoya Magon</p>
             </div>
         </footer>
-        
     </body>
 </html>
