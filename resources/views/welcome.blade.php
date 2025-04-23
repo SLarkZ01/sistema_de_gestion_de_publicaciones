@@ -72,7 +72,7 @@
             <!-- Hero Section -->
             <section class="bg-gradient-to-r from-primary-400 to-primary-600 text-white py-20">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Bienvenido al Sistema de Gestión de Publicaciones</h1>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Bienvenid@ al Sistema de Gestión de Publicaciones</h1>
                     <p class="text-xl mb-10 max-w-3xl mx-auto">Una plataforma completa para crear, administrar y organizar tus publicaciones de manera eficiente</p>
                     @if (Route::has('login'))
                         @auth
