@@ -13,68 +13,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-        
-        <style>
-            body {
-                font-family: 'Poppins', sans-serif;
-                background-color: #f8f9fa;
-            }
-            .hero-section {
-                background: linear-gradient(135deg, #4e73df 0%, #224abe 100%);
-                color: white;
-                padding: 5rem 0;
-                margin-bottom: 2rem;
-            }
-            .feature-box {
-                background-color: white;
-                border-radius: 10px;
-                padding: 1.5rem;
-                box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
-                margin-bottom: 1.5rem;
-                transition: transform 0.3s ease;
-                height: 100%;
-            }
-            .feature-box:hover {
-                transform: translateY(-5px);
-            }
-            .feature-icon {
-                font-size: 2.5rem;
-                margin-bottom: 1rem;
-                color: #4e73df;
-            }
-            .nav-btn {
-                margin: 0 0.5rem;
-            }
-            .footer {
-                background-color: #4e73df;
-                color: white;
-                padding: 1.5rem 0;
-                margin-top: 2rem;
-            }
-            .get-started-btn {
-                background-color: #36b9cc;
-                border-color: #36b9cc;
-                font-weight: 600;
-                padding: 0.75rem 1.5rem;
-            }
-            .get-started-btn:hover {
-                background-color: #2c9faf;
-                border-color: #2c9faf;
-            }
-            .step-box {
-                padding: 2rem;
-                border-left: 5px solid #4e73df;
-                margin-bottom: 1.5rem;
-                background-color: white;
-                box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.1);
-            }
-            .step-number {
-                font-size: 1.5rem;
-                font-weight: bold;
-                color: #4e73df;
-                margin-right: 0.5rem;
-            }
-        </style>
+        <!-- Estilos personalizados -->
+        <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
     </head>
     <body>
         <header>
@@ -180,7 +120,7 @@
                     
                     <div class="step-box">
                         <h3><span class="step-number">3.</span> Crear Publicaciones</h3>
-                        <p>Utiliza el editor integrado para crear nuevas publicaciones. Puedes añadir texto, imágenes, documentos y otros elementos multimedia.</p>
+                        <p>Utiliza el editor integrado para crear nuevas publicaciones. Puedes añadir texto, por el momento solo puedes añadir texto</p>
                     </div>
                     
                     <div class="step-box">
@@ -199,7 +139,7 @@
             <section class="py-5">
                 <div class="container text-center">
                     <h2 class="mb-4">¿Listo para comenzar?</h2>
-                    <p class="lead mb-5">Únete a nuestra plataforma y empieza a gestionar tus publicaciones de manera eficiente</p>
+                    <p class="lead mb-5">Únete a mi plataforma y empieza a gestionar tus publicaciones de manera eficiente</p>
                     @if (Route::has('login'))
                         @auth
                             <a href="{{ url('/dashboard') }}" class="btn btn-lg btn-primary">Ir al Dashboard</a>
@@ -216,7 +156,7 @@
         
         <footer class="footer">
             <div class="container text-center">
-                <p class="mb-0">&copy; {{ date('Y') }} Sistema de Gestión de Publicaciones. Todos los derechos reservados.</p>
+                <p class="mb-0">&copy; {{ date('Y') }} Sistema de Gestión de Publicaciones. Derechos por Thomas Montoya Magon</p>
             </div>
         </footer>
         
